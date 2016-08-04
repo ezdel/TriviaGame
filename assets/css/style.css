@@ -1,0 +1,47 @@
+body {
+	background-image: url(http://www.sarcodius.com/websites/528LGE/images/articles/gaming/arcadegames.jpg);
+	font-family: 'Lucida Console', 'Futura', sans serif;
+	color: yellow;
+	text-shadow: 2px 2px blue;
+}
+
+header {
+	font-size: 48px;
+	text-align: center;
+	font-family: 'Fascinate Inline';
+}
+#startButton {
+	text-align: center;
+	margin: auto;
+}
+button {
+	color: yellow;
+	background-color: blue;
+}
+#timer {
+	text-align: center;
+	margin-top: 20px;
+}
+#gameArea {
+	margin-top: 50px;
+	margin-left: 200px;
+	margin-right: 300px;
+} 
+
+li {
+	list-style: none;
+	padding: 10px;
+	margin-left: 40px;
+	margin-top: 10px;
+
+}
+
+li:hover{
+	background-color: blue;
+}
+
+#gif {
+	text-align: center;
+	height: 200px;
+	width: auto;
+}
