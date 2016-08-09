@@ -102,12 +102,10 @@ $(document).ready(function(){
 	};
 
 	function timerStart(){
-
 		setInterval(timer, 1000);
 	};
 
-	$('#start').on('click', function(){
-		
+	$('#start').on('click', function(){	
 		inPlay();
 		$('#gameArea').show();
 		$('#start').hide();
@@ -127,17 +125,7 @@ $(document).ready(function(){
 		$('#question').append('<li value=4>' + questions[currentQuestion].choices[4] + '</li>');
 		
 		$('#stats').html('Correct Answers: ' + rightAnswers + '<br>' + 'Wrong Answers: ' + wrongAnswers);
-		// if (time == 0){
-		// 	wrongAnswers++;
-		// 	wrong();
-		// }
-
-		// if (currentQuestion == questions.length) {
-		// 	$('#stats').show();
-		// 	$('#question').hide();
-		// 	$('#answer').hide();
-		// 	resetGame();
-		//}
+		
 		$('li').on('click', function(){
 			$('#question').hide();
 			if (this.value == questions[currentQuestion].answer){
@@ -179,21 +167,25 @@ $(document).ready(function(){
 
 	function delay(){
 		$('#timer').hide();
-		if (currentQuestion < questions.length){
+		// if (currentQuestion < questions.length){
 		setTimeout(nextQuestion, 5000)
-		}	
-		else {
-			endGame()
-		}
+		// }	
+		// else {
+		// 	endGame()
+		// }
 	};
 	function nextQuestion(){
-
+		if (currentQuestion < questions.length){
 		time = 15;
 		inPlay();
 		$('#gameArea').show();
 		$('#question').show();
 		$('#answer').hide();
 		$('#fact').hide();
+		}
+		else {
+			endGame();
+		}
 	};
 	function resetGame(){
 		gameOver = true;
@@ -203,7 +195,6 @@ $(document).ready(function(){
 		$('#gameArea').hide();
 		$('#start').show();
 		$('#start').on('click', function(){
-		
 			inPlay();
 			$('#gameArea').show();
 			$('#start').hide();
