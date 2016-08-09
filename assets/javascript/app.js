@@ -167,12 +167,7 @@ $(document).ready(function(){
 
 	function delay(){
 		$('#timer').hide();
-		// if (currentQuestion < questions.length){
 		setTimeout(nextQuestion, 5000)
-		// }	
-		// else {
-		// 	endGame()
-		// }
 	};
 	function nextQuestion(){
 		if (currentQuestion < questions.length){
