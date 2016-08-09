@@ -1,6 +1,6 @@
 body {
-	background-image: url(http://www.sarcodius.com/websites/528LGE/images/articles/gaming/arcadegames.jpg);
-	font-family: 'Lucida Console', 'Futura', sans serif;
+	background-image: url(../images/arcadegames.jpg);
+	font-family: 'Courier', 'Futura', sans serif;
 	color: yellow;
 	text-shadow: 2px 2px blue;
 }
@@ -23,9 +23,9 @@ button {
 	margin-top: 20px;
 }
 #gameArea {
-	margin-top: 50px;
 	margin-left: 200px;
 	margin-right: 300px;
+	font-size: 18px;
 } 
 
 li {
@@ -40,7 +40,7 @@ li:hover{
 	background-color: blue;
 }
 
-#gif {
+img {
 	text-align: center;
 	height: 200px;
 	width: auto;
