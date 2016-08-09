@@ -94,13 +94,18 @@ $(document).ready(function(){
 	function timer(){
 		time--; 
 		$('#timer').html('<p>:' + time + '</p>');
+		if (time < 10){
+			$('#timer').html('<p>:0' + time + '</p>');
+		}
 		if (time == 0){
 			wrongAnswers++;
 			wrong();
 			$('#question').hide();
 		}
 	};
-
+	function timerStop(){
+		time = 15;
+	}
 	function timerStart(){
 		setInterval(timer, 1000);
 	};
@@ -128,6 +133,7 @@ $(document).ready(function(){
 		
 		$('li').on('click', function(){
 			$('#question').hide();
+			timerStop();
 			if (this.value == questions[currentQuestion].answer){
 				rightAnswers++;
 				correct();
@@ -167,7 +173,7 @@ $(document).ready(function(){
 
 	function delay(){
 		$('#timer').hide();
-		setTimeout(nextQuestion, 5000)
+		setTimeout(nextQuestion, 8000)
 	};
 	function nextQuestion(){
 		if (currentQuestion < questions.length){
